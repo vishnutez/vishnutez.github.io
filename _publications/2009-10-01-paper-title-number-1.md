@@ -1,14 +1,14 @@
 ---
-title: "Paper Title Number 1"
+title: "Transformers are Provably Optimal In-context Estimators for Wireless Communications"
 collection: publications
-category: manuscripts
+category: conferences
 permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+excerpt: 'This paper introduces the concept of in-context estimation (ICE), where pre-trained transformers adapt to new tasks by leveraging limited prompts without explicit optimization. It proves that single-layer softmax attention transformers (SATs) can optimally solve ICE problems for a subclass of cases and demonstrates that multi-layer transformers efficiently handle broader ICE problems, outperforming standard approaches. The study highlights that transformers achieve near-optimal performance with minimal context examples, rivaling estimators with perfect knowledge of the latent context.'
+date: 2025-05-03
+venue: 'AISTATS'
+# slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
+paperurl: 'https://arxiv.org/abs/2311.00226'
+citation: 'Vishnu Teja Kunde, Vicram Rajagopalan, Chandra Shekhara Kaushik Valmeekam, Krishna Narayanan, Srinivas Shakkottai, Dileep Kalathil, and Jean-Francois Chamberland. "Transformers are Provably Optimal In-context Estimators for Wireless Communications." arXiv preprint, arXiv:2311.00226, 2025'
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+Pre-trained transformers exhibit the capability of adapting to new tasks through in-context learning (ICL), where they efficiently utilize a limited set of prompts without explicit model optimization. The canonical communication problem of estimating transmitted symbols from received observations can be modeled as an in-context learning problem: received observations are a noisy function of transmitted symbols, and this function can be represented by an unknown parameter whose statistics depend on an unknown latent context. This problem, which we term in-context estimation (ICE), has significantly greater complexity than the extensively studied linear regression problem. The optimal solution to the ICE problem is a non-linear function of the underlying context. In this paper, we prove that, for a subclass of such problems, a single-layer softmax attention transformer (SAT) computes the optimal solution of the above estimation problem in the limit of large prompt length. We also prove that the optimal configuration of such a transformer is indeed the minimizer of the corresponding training loss. Further, we empirically demonstrate the proficiency of multi-layer transformers in efficiently solving broader in-context estimation problems. Through extensive simulations, we show that solving ICE problems using transformers significantly outperforms standard approaches. Moreover, just with a few context examples, it achieves the same performance as an estimator with perfect knowledge of the latent context. The code is available [here](https://github.com/vishnutez/in-context-estimation)
