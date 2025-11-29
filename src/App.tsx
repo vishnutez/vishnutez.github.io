@@ -61,7 +61,7 @@ export default function App() {
   const profileData = {
     name: "Vishnu Teja Kunde",
     imageSrc:
-      "_images/display_picture.jpg",
+      "/_images/display_picture.jpg",
     links: {
       github: "https://github.com/vishnutez",
       scholar:
