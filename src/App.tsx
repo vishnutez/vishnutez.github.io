@@ -6,6 +6,8 @@ import { TechnicalArticlesSection } from "./components/TechnicalArticlesSection"
 import { EducationSection } from "./components/EducationSection";
 import { SelectedPapersSection } from "./components/SelectedPapersSection";
 import { Sun, Moon } from "lucide-react";
+import { CurrentProjectSection } from "./components/CurrentProjectSection";
+import { ResearchInterestsSection } from "./components/ResearchInterestsSection";
 import bioContent from "./content/bio.md?raw";
 
 // Configuration flag to show/hide articles section
@@ -332,6 +334,8 @@ export default function App() {
                   updates={aboutData.updates}
                   theme={theme}
                 />
+                <CurrentProjectSection theme={theme} />
+                <ResearchInterestsSection theme={theme} />
                 <SelectedPapersSection
                   papers={selectedPapers}
                   theme={theme}
