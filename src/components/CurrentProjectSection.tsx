@@ -27,7 +27,6 @@ export function CurrentProjectSection({ theme }: CurrentProjectSectionProps) {
         >
           Improving Reasoning in Diffusion LLMs using Reinforcement Learning
         </h4>
-
         <p
           className={`mb-4 ${
             theme === "dark" ? "text-gray-300" : "text-gray-700"
@@ -35,21 +34,6 @@ export function CurrentProjectSection({ theme }: CurrentProjectSectionProps) {
         >
           I am designing RL methods to improve the reasoning capabilities of diffusion-based LLMs. Because diffusion LLMs don't expose tractable likelihoods, standard policy-gradient RL cannot be applied directly. My research develops diffusion-specific RL objectives and gradient estimators that make reasoning-oriented fine-tuning stable and effective.
         </p>
-
-        <div className="flex gap-3">
-          <a
-            href="https://github.com/vishnutez/d1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`px-4 py-1.5 rounded-md border transition-colors font-mono text-sm ${
-              theme === "dark"
-                ? "border-white text-white hover:bg-[#FF4500] hover:border-[#FF4500]"
-                : "border-gray-900 text-gray-900 hover:bg-[#FF4500] hover:border-[#FF4500] hover:text-white"
-            }`}
-          >
-            CODE
-          </a>
-        </div>
       </div>
     </section>
   );
