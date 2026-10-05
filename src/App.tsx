@@ -112,6 +112,16 @@ export default function App() {
     ],
     updates: [
       {
+        date: "Sep, 2026",
+        content:
+          "Two papers accepted to NeurIPS 2026: reinforcement learning for diffusion LLMs with entropy-guided step selection and stepwise advantages, and inference-time search using side information for diffusion-based image reconstruction!",
+      },
+      {
+        date: "Jul, 2026",
+        content:
+          "Our work on real-time text transmission via LLM-based entropy coding over fixed-rate channels is accepted to Asilomar 2026!",
+      },
+      {
         date: "Oct, 2025",
         content:
           "Our work on developing an inference-time search algorithm for diffused-based image reconstruction using side information is on arXiv!",
@@ -127,10 +137,30 @@ export default function App() {
   const selectedPapers = [
     {
       title:
+        "Reinforcement Learning for Diffusion LLMs with Entropy-Guided Step Selection and Stepwise Advantages",
+      authors: "Vishnu Teja Kunde, Fatemeh Doudi, Mahdi Farahbakhsh, Dileep Kalathil, Krishna Narayanan, and Jean-Francois Chamberland",
+      venue: "NeurIPS (To appear)",
+      year: 2026,
+      description:
+        "Proposed a reinforcement learning approach for diffusion large language models that uses entropy-guided step selection and stepwise advantages.",
+      pdfLink: "https://arxiv.org/pdf/2603.12554",
+      codeLink: "https://github.com/vishnutez/egspo-dllm-rl",
+      bibtex: `@misc{kunde2026reinforcementlearningdiffusionllms,
+  title={Reinforcement Learning for Diffusion LLMs with Entropy-Guided Step Selection and Stepwise Advantages},
+  author={Vishnu Teja Kunde and Fatemeh Doudi and Mahdi Farahbakhsh and Dileep Kalathil and Krishna Narayanan and Jean-Francois Chamberland},
+  year={2026},
+  eprint={2603.12554},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2603.12554}
+}`,
+    },
+    {
+      title:
         "Inference-Time Search using Side Information for Diffused-Based Image Reconstruction",
       authors: "Mahdi Farahbakhsh*, Vishnu Teja Kunde*, Dileep Kalathil, Krishna Narayanan, and Jean-Francois Chamberland",
-      venue: "arXiv Preprint",
-      year: 2025,
+      venue: "NeurIPS (To appear)",
+      year: 2026,
       description:
         "Developed a novel inference-time search algorithm for diffusion models that leverages side information to guide the image sampling process, resulting in more accurate and reliable reconstructions for ill-posed inverse problems.",
       pdfLink: "https://arxiv.org/pdf/2510.03352",
@@ -164,10 +194,30 @@ export default function App() {
   const publications = [
     {
       title:
+        "Reinforcement Learning for Diffusion LLMs with Entropy-Guided Step Selection and Stepwise Advantages",
+      authors: "Vishnu Teja Kunde, Fatemeh Doudi, Mahdi Farahbakhsh, Dileep Kalathil, Krishna Narayanan, and Jean-Francois Chamberland",
+      venue: "NeurIPS (To appear)",
+      year: 2026,
+      description:
+        "Proposed a reinforcement learning approach for diffusion large language models that uses entropy-guided step selection and stepwise advantages.",
+      pdfLink: "https://arxiv.org/pdf/2603.12554",
+      codeLink: "https://github.com/vishnutez/egspo-dllm-rl",
+      bibtex: `@misc{kunde2026reinforcementlearningdiffusionllms,
+  title={Reinforcement Learning for Diffusion LLMs with Entropy-Guided Step Selection and Stepwise Advantages},
+  author={Vishnu Teja Kunde and Fatemeh Doudi and Mahdi Farahbakhsh and Dileep Kalathil and Krishna Narayanan and Jean-Francois Chamberland},
+  year={2026},
+  eprint={2603.12554},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2603.12554}
+}`,
+    },
+    {
+      title:
         "Inference-Time Search using Side Information for Diffusion-based Image Reconstruction",
       authors: "Mahdi Farahbakhsh*, Vishnu Teja Kunde*, Dileep Kalathil, Krishna Narayanan, and Jean-Francois Chamberland",
-      venue: "arXiv Preprint",
-      year: 2025,
+      venue: "NeurIPS (To appear)",
+      year: 2026,
       description:
         "Developed a novel inference-time search algorithm for diffusion models that leverages side information to guide the image sampling process, resulting in more accurate and reliable reconstructions for ill-posed inverse problems.",
       pdfLink: "https://arxiv.org/pdf/2510.03352",
@@ -177,6 +227,25 @@ export default function App() {
   author={Farahbakhsh, Mahdi and Kunde, Vishnu Teja and Kalathil, Dileep and Narayanan, Krishna and Chamberland, Jean-Francois},
   journal={arXiv preprint arXiv:2510.03352},
   year={2025}
+}`,
+    },
+    {
+      title:
+        "Real-Time Text Transmission via LLM-Based Entropy Coding over Fixed-Rate Channels",
+      authors: "Vishnu Teja Kunde, Jean-Francois Chamberland, Krishna R. Narayanan, and Jamison Ebert",
+      venue: "Asilomar (To appear)",
+      year: 2026,
+      description:
+        "Proposed real-time text transmission over fixed-rate channels using LLM-based entropy coding.",
+      pdfLink: "https://arxiv.org/pdf/2605.01991",
+      bibtex: `@misc{kunde2026realtimetexttransmissionllmbased,
+  title={Real-Time Text Transmission via LLM-Based Entropy Coding over Fixed-Rate Channels},
+  author={Vishnu Teja Kunde and Jean-Francois Chamberland and Krishna R. Narayanan and Jamison Ebert},
+  year={2026},
+  eprint={2605.01991},
+  archivePrefix={arXiv},
+  primaryClass={cs.IT},
+  url={https://arxiv.org/abs/2605.01991}
 }`,
     },
     {
@@ -200,16 +269,19 @@ export default function App() {
       title:
         "Approximate Message Passing for Multi-Preamble Detection in OTFS Random Access",
       authors: "Alessandro Mirri, Vishnu Teja Kunde, Enrico Paolini, and Jean-Francois Chamberland",
-      venue: "arXiv Preprint",
-      year: 2025,
+      venue: "ICASSP",
+      year: 2026,
       description:
         "We propose an approximate message passing algorithm for multi-preamble detection in OTFS random access.",
       pdfLink: "https://arxiv.org/pdf/2509.03980",
-      bibtex: `@article{mirri2025approximate,
-  title={Approximate Message Passing for Multi-Preamble Detection in OTFS Random Access},
+      bibtex: `@inproceedings{11460473,
   author={Mirri, Alessandro and Kunde, Vishnu Teja and Paolini, Enrico and Chamberland, Jean-Francois},
-  journal={arXiv preprint arXiv:2509.03980},
-  year={2025}
+  booktitle={ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  title={Approximate Message Passing for Multi-Preamble Detection in OTFS Random Access},
+  year={2026},
+  pages={21491-21495},
+  keywords={Antennas;Radio broadcasting;Frequency modulation;System-on-chip;Application specific integrated circuits;Modulation;Instant messaging;Massive machine type communications;Telecommunications;Communications technology;OTFS (Orthogonal Time Frequency Space);Preamble Detection;Random Access;Complex Sparse Group LASSO;Approximate Message Passing (AMP)},
+  doi={10.1109/ICASSP55912.2026.11460473}
 }`,
     },
   ];

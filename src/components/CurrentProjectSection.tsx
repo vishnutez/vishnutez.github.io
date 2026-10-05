@@ -25,14 +25,14 @@ export function CurrentProjectSection({ theme }: CurrentProjectSectionProps) {
             theme === "dark" ? "text-white" : "text-gray-900"
           }`}
         >
-          Improving Reasoning in Diffusion LLMs using Reinforcement Learning
+          Multi-Agent Collaboration in LLMs
         </h4>
         <p
           className={`mb-4 ${
             theme === "dark" ? "text-gray-300" : "text-gray-700"
           }`}
         >
-          I am designing RL methods to improve the reasoning capabilities of diffusion-based LLMs. Because diffusion LLMs don't expose tractable likelihoods, standard policy-gradient RL cannot be applied directly. My research develops diffusion-specific RL objectives and gradient estimators that make reasoning-oriented fine-tuning stable and effective.
+          I am exploring non-parametric and parametric learning in complex LLM tasks using collaborative frameworks.
         </p>
       </div>
     </section>
