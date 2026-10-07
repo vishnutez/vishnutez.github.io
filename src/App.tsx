@@ -112,6 +112,11 @@ export default function App() {
     ],
     updates: [
       {
+        date: "Oct, 2026",
+        content:
+          "Our work on AgentDiscover, autonomous discovery with minimal search scaffolding, is on arXiv!",
+      },
+      {
         date: "Sep, 2026",
         content:
           "Two papers accepted to NeurIPS 2026: reinforcement learning for diffusion LLMs with entropy-guided step selection and stepwise advantages, and inference-time search using side information for diffusion-based image reconstruction!",
@@ -135,6 +140,26 @@ export default function App() {
   };
 
   const selectedPapers = [
+    {
+      title:
+        "AgentDiscover: Autonomous Discovery with Minimal Search Scaffolding",
+      authors: "Mahdi Farahbakhsh, Ilan Sela, Fatemeh Doudi, Vishnu Teja Kunde, Krishna Narayanan, Jean-Francois Chamberland, and Dileep Kalathil",
+      venue: "arXiv Preprint",
+      year: 2026,
+      description:
+        "Introduced AgentDiscover, where a coding agent plans the search itself and records every attempt in a database of ideas and candidates that serves as long-term memory, outperforming prior LLM-based discovery frameworks at lower cost on kernel engineering, biology, algorithm design, and mathematics tasks.",
+      pdfLink: "https://arxiv.org/pdf/2610.05334",
+      codeLink: "https://github.com/mhdfb/AgentDiscover",
+      bibtex: `@misc{farahbakhsh2026agentdiscover,
+  title={AgentDiscover: Autonomous Discovery with Minimal Search Scaffolding},
+  author={Mahdi Farahbakhsh and Ilan Sela and Fatemeh Doudi and Vishnu Teja Kunde and Krishna Narayanan and Jean-Francois Chamberland and Dileep Kalathil},
+  year={2026},
+  eprint={2610.05334},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2610.05334}
+}`,
+    },
     {
       title:
         "Reinforcement Learning for Diffusion LLMs with Entropy-Guided Step Selection and Stepwise Advantages",
@@ -192,6 +217,26 @@ export default function App() {
   ];
 
   const publications = [
+    {
+      title:
+        "AgentDiscover: Autonomous Discovery with Minimal Search Scaffolding",
+      authors: "Mahdi Farahbakhsh, Ilan Sela, Fatemeh Doudi, Vishnu Teja Kunde, Krishna Narayanan, Jean-Francois Chamberland, and Dileep Kalathil",
+      venue: "arXiv Preprint",
+      year: 2026,
+      description:
+        "Introduced AgentDiscover, where a coding agent plans the search itself and records every attempt in a database of ideas and candidates that serves as long-term memory, outperforming prior LLM-based discovery frameworks at lower cost on kernel engineering, biology, algorithm design, and mathematics tasks.",
+      pdfLink: "https://arxiv.org/pdf/2610.05334",
+      codeLink: "https://github.com/mhdfb/AgentDiscover",
+      bibtex: `@misc{farahbakhsh2026agentdiscover,
+  title={AgentDiscover: Autonomous Discovery with Minimal Search Scaffolding},
+  author={Mahdi Farahbakhsh and Ilan Sela and Fatemeh Doudi and Vishnu Teja Kunde and Krishna Narayanan and Jean-Francois Chamberland and Dileep Kalathil},
+  year={2026},
+  eprint={2610.05334},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2610.05334}
+}`,
+    },
     {
       title:
         "Reinforcement Learning for Diffusion LLMs with Entropy-Guided Step Selection and Stepwise Advantages",
