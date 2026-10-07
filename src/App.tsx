@@ -4,6 +4,7 @@ import { AboutSection } from "./components/AboutSection";
 import { PublicationsSection } from "./components/PublicationsSection";
 import { TechnicalArticlesSection } from "./components/TechnicalArticlesSection";
 import { EducationSection } from "./components/EducationSection";
+import { ExperienceSection } from "./components/ExperienceSection";
 import { SelectedPapersSection } from "./components/SelectedPapersSection";
 import { Sun, Moon } from "lucide-react";
 import { CurrentProjectSection } from "./components/CurrentProjectSection";
@@ -76,6 +77,15 @@ export default function App() {
 
   const aboutData = {
     bio: bioContent,
+    experience: [
+      {
+        role: "Summer Intern",
+        organization: "Qualcomm AI Research, San Diego",
+        duration: "May - Aug 2026",
+        description:
+          "Developed an agentic harness for multi-hop deep retrieval.",
+      },
+    ],
     education: [
       {
         degree: "Doctorate in Computer Engineering",
@@ -120,6 +130,11 @@ export default function App() {
         date: "Sep, 2026",
         content:
           "Two papers accepted to NeurIPS 2026: reinforcement learning for diffusion LLMs with entropy-guided step selection and stepwise advantages, and inference-time search using side information for diffusion-based image reconstruction!",
+      },
+      {
+        date: "Aug, 2026",
+        content:
+          "Wrapped up my summer internship at Qualcomm AI Research, San Diego, where I developed an agentic harness for multi-hop deep retrieval.",
       },
       {
         date: "Jul, 2026",
@@ -472,10 +487,16 @@ export default function App() {
               />
             )}
             {activeTab === "background" && (
-              <EducationSection
-                education={aboutData.education}
-                theme={theme}
-              />
+              <div className="space-y-10">
+                <ExperienceSection
+                  experience={aboutData.experience}
+                  theme={theme}
+                />
+                <EducationSection
+                  education={aboutData.education}
+                  theme={theme}
+                />
+              </div>
             )}
             </main>
           </div>
