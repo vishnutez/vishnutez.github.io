@@ -5,6 +5,7 @@ import { PublicationsSection } from "./components/PublicationsSection";
 import { TechnicalArticlesSection } from "./components/TechnicalArticlesSection";
 import { EducationSection } from "./components/EducationSection";
 import { ExperienceSection } from "./components/ExperienceSection";
+import { ServiceSection } from "./components/ServiceSection";
 import { SelectedPapersSection } from "./components/SelectedPapersSection";
 import { Sun, Moon } from "lucide-react";
 import { CurrentProjectSection } from "./components/CurrentProjectSection";
@@ -86,6 +87,16 @@ export default function App() {
           "Developed an agentic harness for multi-hop deep retrieval.",
       },
     ],
+    service: [
+      {
+        title: "Gold Reviewer, ICML 2026",
+        detail: "Recognized for outstanding reviewing at ICML 2026.",
+      },
+      {
+        title: "Conference Reviewer",
+        detail: "NeurIPS, ICLR, ICML",
+      },
+    ],
     education: [
       {
         degree: "Doctorate in Computer Engineering",
@@ -142,6 +153,11 @@ export default function App() {
           "Our work on real-time text transmission via LLM-based entropy coding over fixed-rate channels is accepted to Asilomar 2026!",
       },
       {
+        date: "May, 2026",
+        content:
+          "Honored to be recognized as a Gold Reviewer for ICML 2026!",
+      },
+      {
         date: "Oct, 2025",
         content:
           "Our work on developing an inference-time search algorithm for diffused-based image reconstruction using side information is on arXiv!",
@@ -163,8 +179,10 @@ export default function App() {
       year: 2026,
       description:
         "Introduced AgentDiscover, where a coding agent plans the search itself and records every attempt in a database of ideas and candidates that serves as long-term memory, outperforming prior LLM-based discovery frameworks at lower cost on kernel engineering, biology, algorithm design, and mathematics tasks.",
+      websiteLink: "https://mhdfb.github.io/AgentDiscover/",
       pdfLink: "https://arxiv.org/pdf/2610.05334",
       codeLink: "https://github.com/mhdfb/AgentDiscover",
+      buttonOrder: ["website", "code", "pdf", "bib"],
       bibtex: `@misc{farahbakhsh2026agentdiscover,
   title={AgentDiscover: Autonomous Discovery with Minimal Search Scaffolding},
   author={Mahdi Farahbakhsh and Ilan Sela and Fatemeh Doudi and Vishnu Teja Kunde and Krishna Narayanan and Jean-Francois Chamberland and Dileep Kalathil},
@@ -240,8 +258,10 @@ export default function App() {
       year: 2026,
       description:
         "Introduced AgentDiscover, where a coding agent plans the search itself and records every attempt in a database of ideas and candidates that serves as long-term memory, outperforming prior LLM-based discovery frameworks at lower cost on kernel engineering, biology, algorithm design, and mathematics tasks.",
+      websiteLink: "https://mhdfb.github.io/AgentDiscover/",
       pdfLink: "https://arxiv.org/pdf/2610.05334",
       codeLink: "https://github.com/mhdfb/AgentDiscover",
+      buttonOrder: ["website", "code", "pdf", "bib"],
       bibtex: `@misc{farahbakhsh2026agentdiscover,
   title={AgentDiscover: Autonomous Discovery with Minimal Search Scaffolding},
   author={Mahdi Farahbakhsh and Ilan Sela and Fatemeh Doudi and Vishnu Teja Kunde and Krishna Narayanan and Jean-Francois Chamberland and Dileep Kalathil},
@@ -494,6 +514,10 @@ export default function App() {
                 />
                 <EducationSection
                   education={aboutData.education}
+                  theme={theme}
+                />
+                <ServiceSection
+                  service={aboutData.service}
                   theme={theme}
                 />
               </div>

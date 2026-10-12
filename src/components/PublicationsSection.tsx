@@ -6,9 +6,11 @@ interface Publication {
   venue: string;
   year: number;
   description: string;
+  websiteLink?: string;
   pdfLink?: string;
   codeLink?: string;
   bibtex?: string;
+  buttonOrder?: ('website' | 'code' | 'pdf' | 'bib')[];
 }
 
 interface PublicationsSectionProps {
@@ -55,46 +57,42 @@ export function PublicationsSection({ publications, theme }: PublicationsSection
             
             {/* Action buttons */}
             <div className="flex gap-3 mb-3">
-              {pub.pdfLink && (
-                <a
-                  href={pub.pdfLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`px-4 py-1.5 rounded-md border transition-colors font-mono text-sm ${
+              {((pub.buttonOrder ?? ['pdf', 'code', 'bib']) as string[]).map((kind) => {
+                const buttonClass = `px-4 py-1.5 rounded-md border transition-colors font-mono text-sm ${
                     theme === 'dark'
                       ? 'border-white text-white hover:bg-[#FF4500] hover:border-[#FF4500]'
                       : 'border-gray-900 text-gray-900 hover:bg-[#FF4500] hover:border-[#FF4500] hover:text-white'
-                  }`}
-                >
-                  PDF
-                </a>
-              )}
-              {pub.codeLink && (
-                <a
-                  href={pub.codeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`px-4 py-1.5 rounded-md border transition-colors font-mono text-sm ${
-                    theme === 'dark'
-                      ? 'border-white text-white hover:bg-[#FF4500] hover:border-[#FF4500]'
-                      : 'border-gray-900 text-gray-900 hover:bg-[#FF4500] hover:border-[#FF4500] hover:text-white'
-                  }`}
-                >
-                  CODE
-                </a>
-              )}
-              {pub.bibtex && (
-                <button
-                  onClick={() => toggleBibtex(index)}
-                  className={`px-4 py-1.5 rounded-md border transition-colors font-mono text-sm ${
-                    theme === 'dark'
-                      ? 'border-white text-white hover:bg-[#FF4500] hover:border-[#FF4500]'
-                      : 'border-gray-900 text-gray-900 hover:bg-[#FF4500] hover:border-[#FF4500] hover:text-white'
-                  }`}
-                >
-                  BIB
-                </button>
-              )}
+                  }`;
+                if (kind === 'website' && pub.websiteLink) {
+                  return (
+                    <a key={kind} href={pub.websiteLink} target="_blank" rel="noopener noreferrer" className={buttonClass}>
+                      WEBSITE
+                    </a>
+                  );
+                }
+                if (kind === 'code' && pub.codeLink) {
+                  return (
+                    <a key={kind} href={pub.codeLink} target="_blank" rel="noopener noreferrer" className={buttonClass}>
+                      CODE
+                    </a>
+                  );
+                }
+                if (kind === 'pdf' && pub.pdfLink) {
+                  return (
+                    <a key={kind} href={pub.pdfLink} target="_blank" rel="noopener noreferrer" className={buttonClass}>
+                      PDF
+                    </a>
+                  );
+                }
+                if (kind === 'bib' && pub.bibtex) {
+                  return (
+                    <button key={kind} onClick={() => toggleBibtex(index)} className={buttonClass}>
+                      BIB
+                    </button>
+                  );
+                }
+                return null;
+              })}
             </div>
 
             {/* Bibtex content */}
